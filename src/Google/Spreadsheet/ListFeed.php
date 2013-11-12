@@ -106,6 +106,9 @@ class ListFeed
                 foreach($cols as $col) {
                     $vals[] = $col->__toString();
                 }
+                if (sizeof($colNames) != sizeof($vals)) {
+                    $colNames[] = 'bbb';
+                }
                 $rows[] = new ListEntry($entry, array_combine($colNames, $vals));
                 
             }
